@@ -1,0 +1,6 @@
+c:\users\qbuser\documents\visual studio 2013\Projects\Angular_test\Angular_test\bin\Angular_test.dll.config
+c:\users\qbuser\documents\visual studio 2013\Projects\Angular_test\Angular_test\bin\Angular_test.dll
+c:\users\qbuser\documents\visual studio 2013\Projects\Angular_test\Angular_test\bin\Angular_test.pdb
+c:\users\qbuser\documents\visual studio 2013\Projects\Angular_test\Angular_test\obj\Debug\Angular_test.csprojResolveAssemblyReference.cache
+c:\users\qbuser\documents\visual studio 2013\Projects\Angular_test\Angular_test\obj\Debug\Angular_test.dll
+c:\users\qbuser\documents\visual studio 2013\Projects\Angular_test\Angular_test\obj\Debug\Angular_test.pdb

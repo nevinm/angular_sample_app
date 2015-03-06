@@ -1,0 +1,54 @@
+﻿
+<div class='navbar navbar-default navbar-fixed-top'>
+    <div class='container'>
+        <div class='navbar-header'>
+            <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'> <span class='glyphicon glyphicon-list'></span> </button>
+            <a class='navbar-brand' href='/project-tracker'>AngularJS Demonstration</a>
+        </div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li> <a href='#/headlines'>Headlines</a> </li>
+                <li> <a href='#/news'>All News</a> </li>
+                <li> <a href='#/news/new'>Post</a> </li>
+                <li> <a href='#/apiStuff'>API Fetch</a> </li>
+                <li> <a href='#/students'>Student Management</a> </li>
+            </ul>
+            <ul class='nav navbar-nav navbar-right'>
+                <li> <a href="#/logout" rel="nofollow">Logout</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--Top nav bar ends here -->
+
+<div class="container" ng-repeat="stuff in data">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <blockquote>
+                <div class="col-md-6">
+                    <p ng-hide="editorEnabled"><b>{{stuff.title}}</b></p>
+                    <input ng-hide="!editorEnabled" type="text" ng-model=stuff.title />
+                </div>
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-12">
+                    <small ng-hide="editorEnabled">{{stuff.description}}</small><br>
+                    <textarea class="form-control" ng-hide="!editorEnabled" ng-model=stuff.description></textarea><br />
+                    <button type="button" ng-click="editorEnabled=false" ng-hide="!editorEnabled" class="btn btn-success">Save</button>
+                    <button type="button" ng-click="editStuff(stuff);editorEnabled=!editorEnabled" ng-hide="editorEnabled" class="btn btn-info">Edit</button>
+                    <button type="button" ng-click="deleteStuff($index, stuff)" class="btn btn-danger">Delete</button><br /><br />
+                </div>
+            </blockquote>
+        </div>
+    </div>
+</div>
+<div class="container row ">
+    <div class="col-md-12 pull-right">
+        <button ng-show="!adderEnabled" class="btn btn-success" ng-click="adderEnabled=!adderEnabled" type="button">Add More</button>
+        <div ng-show="adderEnabled" class="col-md-6 offset-md-3">
+            <input type="text" ng-model="stuff.title" placeholder="Title" />
+            <textarea ng-model="stuff.description" placeholder="Description"></textarea>
+            <button ng-click="addStuff(stuff);adderEnabled=!adderEnabled" class="btn btn-success" type="button">Add this!</button>
+        </div>
+    </div>
+</div>
