@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Nevin",
+        "age": 23,
+        "branch": "CS"
+    },
+    {
+        "name": "Ramath",
+        "age": 27,
+        "branch": "EC"
+    },
+    {
+        "name": "Vignesh",
+        "age": 25,
+        "branch": "ME"
+    }
+]
